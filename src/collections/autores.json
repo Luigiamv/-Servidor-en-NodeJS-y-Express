@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "61099b6f3159a866bb70f4e9"
+  },
+  "nombre": "Edgar",
+  "apellido": "Valero",
+  "edad": "22",
+  "genero": "Masculino",
+  "pais": "Venezuela",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61099b843159a866bb70f4eb"
+  },
+  "nombre": "Jose",
+  "apellido": "Perez",
+  "edad": "26",
+  "genero": "Masculino",
+  "pais": "Venezuela",
+  "__v": 0
+}]

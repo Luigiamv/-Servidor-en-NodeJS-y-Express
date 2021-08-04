@@ -1,0 +1,32 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            if(!noticiaDetalle)
+                .my-5.container
+                    .my-2.alert.alert-info.text-center.mt-4.col-md-6.justify-content-center.m-auto Esta noticia no existe 
+                    a.btn.btn-block.mt-5.text-center.btn-success(href="/") Volver
+            else
+                .card.mb-3.mx-auto.my-5(style='max-width: 800px;')
+                    .row.g-0
+                        .col-md-12
+                        img(src=`/images/${noticiaDetalle.imagen}` class="img-fluid")
+                        .col-md-8
+                        .card-body
+                            h5.card-title #{noticiaDetalle.titulo}
+                            p.card-text
+                            | Subtitulo: #{noticiaDetalle.subtitulo}
+                            p.card-text
+                            | #{noticiaDetalle.descripcion}
+                            p.card-text
+                            small.text-muted Fecha: #{new Date(noticiaDetalle.fecha).toLocaleDateString()}
+                            p.card-text.mr-4
+                            small.text-muted Autor: #{noticiaDetalle.autor ? noticiaDetalle.autor.nombre : 'Sin especificar'} #{noticiaDetalle.autor ? noticiaDetalle.autor.apellido : 'Sin especificar' }
+                            p.card-text.mr-4
+                            small.text-muted Categoria: #{noticiaDetalle.categoria ? noticiaDetalle.categoria.nombre : 'Sin especificar'}
+                            .container.mt-5 
+                                a(href=`/noticia-editar/${noticiaDetalle.id}`).btn.btn-info Editar
+                                    i.fas.fa-edit
+                                a(href=`/noticia-eliminar/${noticiaDetalle._id}` onClick=`return confirm('¿Esta seguro en eliminar la noticia: ${noticiaDetalle.titulo}?')`).btn.btn-danger.ml-2 Elminar
+                                    i.fas.fa-trash
+

@@ -1,0 +1,58 @@
+[{
+  "_id": {
+    "$oid": "61099bc53159a866bb70f4f4"
+  },
+  "titulo": "Bad Bunny se une a Romeo Santos y Aventura",
+  "descripcion": "Tras el sorpresivo anuncio que realizaron el último lunes de que lanzarían una colaboración juntos, Bad Bunny acaba de estrenarse en el género de la bachata junto a Romeo Santos y el grupo Aventura con “Volví”.\r\n\r\nEl ‘Conejo Malo’ se ha adaptado a la perfección a este estilo de música, al que no está acostumbrado, y con el que ha dejado impactados a sus seguidores pues le ha puesto su sello propio con un toque de reguetón a la canción.\r\n\r\n“Volví” también marca el final del reencuentro del ‘Rey de la Bachata’ con la agrupación que fundó junto a sus hermanos en 1993, pues como se recuerda desde el año pasado se juntó con ellos para ofrecer una serie de conciertos.\r\n\"Tengo la fecha escrita en el calendario, si yo volví a Aventura, tú regresas a mi lado, baby”, dice parte de la letra de este single, que llegó acompañado de un video cargado de sensualidad, que muestra el reencuentro de una pareja que protagoniza un erótico baile.\r\n\r\nAventura es recordada “Obsesión”, canción que lanzaron en 2002 y se volvió un éxito. En 2011, Romeo Santos, quien era el vocalista, anunció que seguiría con su carrera en solitario. Se han reunido en más de una oportunidad y en breve iniciarán su gira “Inmortal”.\r\n\r\nPor su parte, Bad Bunny se ha convertido en una de las mayores estrellas de la música urbana en los últimos tiempos. Algunos de los ‘hits’ del puertorriqueño de este año son “La Noche de Anoche”, su colaboración con Rosalía, y “Yonaguni”. ",
+  "subtitulo": "El ‘Conejo Malo’ se ha adaptado a la perfección a este estilo de música y le ha puesto su sello propio con un toque de reguetón a la canción.",
+  "categoria": {
+    "$oid": "61099b4a3159a866bb70f4e6"
+  },
+  "autor": {
+    "$oid": "61099b6f3159a866bb70f4e9"
+  },
+  "fecha": {
+    "$date": "2021-08-03T00:00:00Z"
+  },
+  "imagen": "1627989551_898949_1627990415_gigante_normal.jpg",
+  "slug": "bad-bunny-se-une-a-romeo-santos-y-aventura",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61099cd33159a866bb70f518"
+  },
+  "titulo": "Yulimar Rojas entra en la leyenda con su primer oro olímpico y récord mundial",
+  "descripcion": " La atleta venezolana Yulimar Rojas ganó la medalla de oro en triple salto, y estableció un récord mundial al saltar 15.67 metros en su quinto y último intento de la competencia , que se desarrolló en el Nuevo Estadio Nacional de la capital japonesa, en el marco de los Juegos Olímpicos Tokio 2020.\r\n\r\nRojas, doble campeona mundial de triple salto, inició este domingo alcanzando en su primer salto el récord olímpico y dejó abierta la posibilidad de batir incluso la marca mundial.\r\n\r\nLa triplista venezolana, favorita al oro en Tokio 2020, marcó un registró de 15.41 y dejó en el camino los 15.39 de Beijing 2008 de la camerunés Francoise Mbango. \r\n\r\nRojas, que contaba con el mejor salto del año, con 15.43 metros, el segundo más grande de la historia, alcanzó en su último salto 15.67 metros, imponiendo nueva marca mundial.\r\n\r\nLa portuguesa Patricia Mamona fue segunda con 15,01 m, y la española Ana Peleteiro quedó en tercer lugar con 14,88 m, un récord naciona",
+  "subtitulo": "Rojas, doble campeona mundial de triple salto, inició este domingo alcanzando en su primer salto el récord olímpico.",
+  "categoria": {
+    "$oid": "61099b8f3159a866bb70f4ee"
+  },
+  "autor": {
+    "$oid": "61099b843159a866bb70f4eb"
+  },
+  "fecha": {
+    "$date": "2021-08-03T00:00:00Z"
+  },
+  "imagen": "_119693846_gettyimages-1234377150.jpg",
+  "slug": "yulimar-rojas-entra-en-la-leyenda-con-su-primer-oro-olimpico-y-record-mundial",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61099d5a3159a866bb70f529"
+  },
+  "titulo": "Pegasus: por qué ahora todos podemos ser espías (pero también ser espiados)",
+  "descripcion": "Según algunas fuentes, alrededor del mundo más de 600 políticos y funcionarios, 189 periodistas, 64 ejecutivos de negocios y 85 activistas, entre otros, habrían sido víctimas de este espionaje. Unos 50.000 números de teléfono habrían sido filtrados.\r\n\r\nLa compañía detrás de Pegasus, NSO Group, ha negado las acusaciones, indicando que no pone estas herramientas en manos de cualquiera y que sus clientes son cuidadosamente valorados.\r\n\r\nPero este es otro indicio de que las complejas tecnologías de espionaje, que solían ser exclusivas de algunos estados, ahora están al alcance de más actores, desafiando la forma en la que concebimos la privacidad y la seguridad en un mundo interconectado. ",
+  "subtitulo": "Las acusaciones sobre la utilización del programa informático Pegasus para vigilar a periodistas, activistas e incluso a líderes políticos nos muestran que la vigilancia digital está ahora en venta.",
+  "categoria": {
+    "$oid": "61099d043159a866bb70f523"
+  },
+  "autor": {
+    "$oid": "61099b6f3159a866bb70f4e9"
+  },
+  "fecha": {
+    "$date": "2021-07-31T00:00:00Z"
+  },
+  "imagen": "pegasus-espionaje.png",
+  "slug": "pegasus-por-que-ahora-todos-podemos-ser-espias-pero-tambien-ser-espiados",
+  "__v": 0
+}]

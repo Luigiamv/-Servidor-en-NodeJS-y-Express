@@ -1,0 +1,46 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            .col-md-10.mx-auto
+                .card.card-body.my-5
+                    if(msg)
+                        p.alert.alert-success.text-center.m-3 #{msg}
+                    if(error)
+                        p.alert.alert-danger.text-center.m-3 #{error}
+                    form(action="/crear-noticia" method="post" enctype="multipart/form-data") 
+                        .form-group
+                            label(for="titulo") Titulo 
+                            input#titulo(type="text",  class="form-control" name="titulo" required="true" placeholder="Agregar titulo") 
+                        .form-group
+                            label(for="subtitulo") Subtitulo  
+                            input#subtitulo(type="text",  class="form-control" name="subtitulo" required="true" placeholder="Agregar subtitulo") 
+                        .form-group
+                            if(autores.length > 0)
+                                        label(for='autor') Autor:
+                                        select#autor.form-control(required='' name='autor')
+                                            option(value='' selected='' disabled='') -- Seleciona un Autor --
+                                                each autor in autores
+                                                    option(value=autor._id) #{autor.nombre} #{autor.apellido}
+                            else 
+                                p.alert.alert-danger.text-center No hay autores registrados
+                        .form-group
+                            label(for="fecha") Fecha  
+                            input#fecha(type="date",  class="form-control" name="fecha" required="true" placeholder="Fecha de la noticia") 
+                        .form-group
+                            if(categorias.length > 0)
+                                        label(for='categoria') Categoría:
+                                        select#categoria.form-control(required='' name='categoria')
+                                            option(value='' selected='' disabled='') -- Seleciona una Categoría --
+                                                each categoria in categorias
+                                                    option(value=categoria._id) #{categoria.nombre}
+                            else 
+                                p.alert.alert-warning.text-center No hay categorias registradas
+                        .form-group
+                            label(for="imagen") Descripcion  
+                            textarea#descripcion(name="descripcion" required="true" placeholder="Descripción de la noticia...").form-control 
+                        .custom-file
+                            input#imagen.custom-file-input(type='file' name="imagen" accept="image/png, image/jpg, image/jpeg" required='true')
+                            label.custom-file-label(for='imagen') Subir imagen
+                        .form-group 
+                            button(type="submit" class="btn mt-4 btn-info btn-block") Crear Noticía

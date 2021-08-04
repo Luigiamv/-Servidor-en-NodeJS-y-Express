@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "61099b4a3159a866bb70f4e6"
+  },
+  "nombre": "Farandula",
+  "editorial": "Los 20",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61099b8f3159a866bb70f4ee"
+  },
+  "nombre": "Deportes",
+  "editorial": "Meridiano",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61099d043159a866bb70f523"
+  },
+  "nombre": "Tecnologia",
+  "editorial": "Tecno Informa",
+  "__v": 0
+}]

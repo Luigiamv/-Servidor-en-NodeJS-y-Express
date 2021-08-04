@@ -1,0 +1,46 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            .col-md-10.mx-auto
+                .card.card-body.my-5
+                    if(msg)
+                        p.alert.alert-success.text-center.m-3 #{msg}
+                    if(error)
+                        p.alert.alert-danger.text-center.m-3 #{error}
+                    if(noticia)
+                        form(action=`/actualizar-noticia/${noticia._id}` method="post" ) 
+                            .form-group
+                                label(for="titulo") Titulo 
+                                input#titulo(type="text", value=noticia.titulo   class="form-control" name="titulo" required="true" placeholder="Agregar titulo") 
+                            .form-group
+                                label(for="subtitulo") Subtitulo  
+                                input#subtitulo(type="text", value=noticia.subtitulo  class="form-control" name="subtitulo" required="true" placeholder="Agregar subtitulo") 
+                            .form-group
+                                if(autores.length > 0)
+                                            label(for='autor') Autor:
+                                            select#autor.form-control(required='' name='autor')
+                                                option(value='' selected='' disabled='') -- Seleciona un Autor --
+                                                    each autor in autores
+                                                        option(value=autor._id) #{autor.nombre} #{autor.apellido}
+                                else 
+                                    p.alert.alert-danger.text-center No hay autores registrados
+                            .form-group
+                                label(for="fecha") Fecha  
+                                input#fecha(type="date", value=noticia.fecha class="form-control" name="fecha" required="true"  placeholder="Fecha de la noticia") 
+                            .form-group
+                                if(categorias.length > 0)
+                                            label(for='categoria') Categoría:
+                                            select#categoria.form-control(required='' name='categoria')
+                                                option(value='' selected='' disabled='') -- Seleciona una Categoría --
+                                                    each categoria in categorias
+                                                        option(value=categoria._id) #{categoria.nombre}
+                                else 
+                                    p.alert.alert-warning.text-center No hay categorias registradas
+                            .form-group
+                                label(for="imagen") Descripcion  
+                                textarea#descripcion(name="descripcion"  required="true" placeholder="Descripción de la noticia...").form-control  #{noticia.descripcion}
+                            .form-group 
+                                button(type="submit" class="btn mt-4 btn-secondary btn-block") Actualizar Noticía
+                    else 
+                        p.alert.alert-danger.text-center.m-3 Esta noticia no existe

@@ -1,0 +1,32 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            .col-md-6.mx-auto
+                .card.card-body.my-5
+                    if(msg)
+                        p.alert.alert-success.text-center.m-3 #{msg}
+                    if(error)
+                        p.alert.alert-danger.text-center.m-3 #{error}
+                    form(action="/crear-autor" method="post") 
+                        .form-group
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text",  class="form-control" name="nombre" required="true" placeholder="Nombre del autor") 
+                        .form-group
+                            label(for="apellido") Apellido 
+                            input#apellido(type="text",  class="form-control" name="apellido" required="true" placeholder="Apellido del autor") 
+                        .form-group
+                            label(for="edad") Edad 
+                            input#edad(type="number", min="20"  class="form-control" name="edad" required="true" placeholder="Edad del autor") 
+                        .form-group
+                            label(for="genero") Genero 
+                            select#genero.form-control(required='' name='genero')
+                                option(value='' selected='' disabled='') -- Selecionar Genero --
+                                option(value="Masculino") Masculino
+                                option(value="Femenino") Femenino
+                                option(value="Otro") Otro
+                        .form-group
+                            label(for="pais") Pais  
+                            input#pais(type="text",  class="form-control" name="pais" required="true" placeholder="Escribe el país del autor") 
+                        .form-group 
+                            button(type="submit" class="btn mt-4 btn-info btn-block") Crear Autor

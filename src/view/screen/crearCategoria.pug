@@ -1,0 +1,19 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            .col-md-6.mx-auto
+                .card.card-body.my-5
+                    if(msg)
+                        p.alert.alert-success.text-center.m-3 #{msg}
+                    if(error)
+                        p.alert.alert-danger.text-center.m-3 #{error}
+                    form(action="/crear-categoria" method="post") 
+                        .form-group
+                            label(for="nombre") Nombre 
+                            input#nombre(type="text",  class="form-control" name="nombre" required="true" placeholder="Nombre de la categoría") 
+                        .form-group
+                            label(for="editorial") Editorial  
+                            input#editorial(type="text",  class="form-control" name="editorial" required="true" placeholder="Agregar editorial de la categoría") 
+                        .form-group 
+                            button(type="submit" class="btn mt-4 btn-primary btn-block") Crear Categoría

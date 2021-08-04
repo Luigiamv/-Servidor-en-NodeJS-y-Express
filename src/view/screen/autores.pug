@@ -1,0 +1,33 @@
+extends ../base/index
+block main
+    .container 
+        .row
+            .col-md-6.mx-auto
+                if(msg)
+                    p.alert.alert-success.text-center.m-3 #{msg}
+                if(error)
+                    p.alert.alert-danger.text-center.m-3 #{error}
+                if(!autores.length)
+                    p.alert.alert-danger.text-center.mt-5 No existen autores registradas 
+                else 
+                    .container 
+                        .row 
+                            table.table.table-striped.mb-5.bg-success
+                                table.table.table-striped.mb-5
+                                    thead.background-table.text-center.bg-info
+                                        th(scope='col') Nombre
+                                        th(scope='col') Apellido
+                                        th(scope='col') Edad
+                                        th(scope='col') Genero
+                                        th(scope='col') Pais
+                                        th(scope='col') Acción
+                                        for autor of autores
+                                            tbody.text-center
+                                                tr
+                                                th(scope='row') #{autor.nombre}
+                                                th(scope='row') #{autor.apellido}
+                                                th(scope='row') #{autor.edad}
+                                                th(scope='row') #{autor.genero}
+                                                th(scope='row') #{autor.pais}
+                                                td
+                                                    a(href=`/autor-eliminar/${autor.id}` onClick=`return confirm('¿Esta seguro en eliminar el autor: ${autor.nombre}?')`).btn.btn-danger.ml-2 Eliminar

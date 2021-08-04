@@ -1,0 +1,39 @@
+extends ../base/index
+block main
+    .container.my-5
+        if(msg)
+            p.alert.alert-success.text-center.mx-auto.mt-4 #{msg}
+        .row
+            if(error)
+                p.alert.alert-danger.text-center.m-3 #{error}
+            if(noticias.length > 0)
+                for noticia of noticias
+                    .col-md-12
+                        article.tarjeta-noticia
+                            a.tarjeta-noticia__imagen_tarjeta(href=`/noticia/${noticia.slug}`)
+                                img.tarjeta-noticia__imagen(src=`/images/${noticia.imagen}`)
+                            .tarjeta-noticia__texto.text-oscuto
+                                h1.tarjeta-noticia__titulo.my-2
+                                a.link  #{noticia.titulo}
+                                .tarjeta-noticia__subtitle.small
+                                span
+                                    i.fas.fa-calendar-alt.mr-2
+                                    | Publicado el: #{new Date(noticia.fecha).toLocaleDateString()}
+                                .tarjeta-noticia__bar
+                                .tarjeta-noticia__preview-txt
+                                |  #{noticia.subtitulo}
+                                ul.tarjeta-noticia__categoria
+                                li.tag__item
+                                    i.fas.fa-tag.m-2
+                                    | Categoria:
+                                    | #{noticia.categoria ? noticia.categoria.nombre : 'Sin especificar'}
+                                li.tag__item
+                                    i.fas.fa-user.m-2
+                                    | Autor:
+                                    | #{noticia.autor ? noticia.autor.nombre : 'Sin especificar'} #{noticia.autor ? noticia.autor.apellido : 'Sin especificar'}
+                                li.tag__item.play
+                                    a.link.my-2(href=`/noticia/${noticia.slug}`) Leer más 
+                                    i.fas.fa-arrow-right.mr-2
+            else 
+                .row.margin-left
+                    .alert.alert-info.text-center.mt-4.col-md-6.justify-content-center.m-auto.rounded No existen noticias registradas
